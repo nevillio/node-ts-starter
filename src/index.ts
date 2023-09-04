@@ -1,4 +1,9 @@
-import  dotenv  from "dotenv";
+import dotenv from "dotenv";
+import express from "express";
 
 dotenv.config();
-console.log(`Your port is ${process.env.PORT}`)
+
+const PORT = process.env.PORT;
+const app = express();
+console.log(`Your port is ${PORT}`);
+app.listen(PORT || 3000);
